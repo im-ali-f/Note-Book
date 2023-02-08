@@ -1,0 +1,164 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    top: 0;
+}
+:root{
+    --primaryColor:#28d6d9;
+    --secondaryColor:#e5f9ff;
+    --mainwhite:rgb(232, 230, 230);
+    --mainBlack:rgb(54, 60, 60);
+    --mainGrey:#7c7c7c;
+    --mainTransition:all 0.3s linear;
+    --mainRed:#db2777;
+    --bodyColor:#e4eeee;
+}
+body{
+    background-color: var(--bodyColor);
+}
+.main{
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+.noteMenu{
+    order: 1;
+    background-color: var(--secondaryColor);
+    text-align: center;
+    position: sticky;
+    height: 100vh;
+    color: var(--mainGrey);
+    border-top-left-radius: 110px;
+    
+    
+}
+.fakeBorder{
+    margin: auto;
+    border: 1px solid var(--primaryColor);
+    opacity: 0.8;
+    
+}
+.fakeBorder2{
+    margin: auto;
+    border: 0.4px var(--mainGrey) dashed;
+    opacity: 0.8;
+}
+.noteMenuP{
+    font-size: 3rem;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+.notePreviewContainer{
+    width: 18rem;
+    margin: auto 1rem;
+    overflow: auto;
+    font-size: large;
+    height: 60vh;
+    
+}
+.note{
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+.noteP{
+    max-height: 5rem;
+    overflow: auto;
+}
+.noteDate{
+    opacity: 0.5;
+}
+.addNoteBTN{
+    background-color: var(--primaryColor);
+    font-size: x-large;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+.createNote{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 5rem;
+    color: var(--mainGrey);
+    
+}
+.createNoteTitle{
+    width: 90%;
+    height: 4rem;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    margin-bottom: 4rem;
+    padding: 1rem;
+    font-size: 40px;
+    color: var(--primaryColor);
+    margin: auto;
+    background-color: var(--secondaryColor);
+    overflow: hidden;
+    resize: none;
+
+}
+.createNoteNote{
+    width: 90%;
+    height: 80%;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    padding: 1rem;
+    color: var(--mainGrey);
+    font-size: larger;
+    margin: auto;
+    background-color: var(--secondaryColor);
+    resize: none;
+}
+.createAreas:focus{
+    background-color: #e4eeee;
+}
+.selectedNote{
+    background-color: var(--mainwhite);
+    border-radius: 8px;
+}
+.noteTitle{
+    color: var(--mainRed);
+}
+.delete{
+    width: 4rem;
+    height: 1.2rem;
+    background-color: var(--mainRed);
+    outline: none;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+  
+}
+.delete:hover{
+    transition: 0.2s;
+    background-color: rgb(232, 115, 115);
+}
+
+
+
+/* ===== Scrollbar ===== */
+ 
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: var(--primaryColor) var(--mainwhite);
+  }
+
+  
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: var(--mainwhite);
+    border-radius: 8px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--primaryColor);
+    border-radius: 10px;
+    border: 3px solid var(--mainwhite);
+  }
