@@ -286,3 +286,23 @@ class noteCreateDelete{
                 });
     }
 }
+document.addEventListener("DOMContentLoaded",()=>{
+    console.log("Dom")
+    
+    addNoteBTN.addEventListener("click",(e)=>{
+        const noteID = noteCounter()
+        noteCreateDelete.createFirstTime(noteID)
+    })
+    let tempAllNotes=editeLocal.getFromLocal()
+    let newAllNotes=[];
+    if (tempAllNotes != null){
+        newAllNotes=[...tempAllNotes]
+    }
+    else{
+        tempAllNotes=[]
+        newAllNotes=[...tempAllNotes]
+    }
+    newAllNotes.forEach(element => {
+        noteCreateDelete.createNotePreview(element)
+    });
+})
